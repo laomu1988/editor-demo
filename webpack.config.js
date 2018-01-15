@@ -22,10 +22,6 @@ const editors = [
 
 
 const plugins = [
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     name: 'vendor',
-    //     minChunks: Infinity,
-    // }),
     extractCSS,
     extractLESS, 
     new CopyWebpackPlugin([{
@@ -53,7 +49,7 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: entrys,
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'docs'),
         filename: '[name]' + hash + '.js',
         chunkFilename: '[id]' + hash + '.chunk.js',
         publicPath: '/',
@@ -79,11 +75,6 @@ module.exports = {
                 use: 'url-loader?limit=10000&name=assets/fonts/[name].[ext]'
             },
         ]
-    },
-    resolve: {
-        alias: {
-            '$vue': 'vue/dist/vue.common.js'
-        }
     },
     plugins: plugins,
     devServer: {

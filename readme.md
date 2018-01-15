@@ -9,12 +9,14 @@
 
 
 ### [tinymce](https://www.tinymce.com)
+[本地demo](https://laomu1988.github.io/editor-demo/tinymce.html)
 缺点：
 * 太重，操作反应时间长
 
 ### [summernote](https://summernote.org/)
-
+[本地demo](https://laomu1988.github.io/editor-demo/summernote.html)
 
 ### [simditor](http://simditor.tower.im/)
+[本地demo](https://laomu1988.github.io/editor-demo/simditor.html)
 缺点：
 * api过于简单，不够灵活，不能执行调整样式的操作
