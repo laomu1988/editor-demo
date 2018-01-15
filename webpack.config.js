@@ -18,7 +18,6 @@ const editors = [
     'simditor',
     'summernote',
     'tinymce',
-    'ueditor'
 ]
 
 

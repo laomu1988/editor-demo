@@ -6,6 +6,22 @@ const $ = window.$ = window.jQuery = require('jquery')
 require('summernote/dist/summernote-lite.js')
 require('summernote/dist/lang/summernote-zh-CN.js')
 
+var HelloButton = function (context) {
+    var ui = $.summernote.ui
+    // create button
+    var button = ui.button({
+        contents: '<i class="fa fa-child"/> Hello',
+        tooltip: 'hello',
+        click: function () {
+            // invoke insertText method with 'hello' on editor module.
+            context.invoke('editor.insertText', 'hello');
+        }
+    })
+  
+    return button.render()  // return button as jquery object
+}
+
+
 const config = {
     lang: 'zh-CN', // default: 'en-US'
     placeholder: '编辑器示例',
@@ -22,8 +38,12 @@ const config = {
         ['para', ['ul', 'ol']],
         ['paragraph'],
         ['table', ['table']],
+        ['mybutton', ['hello']]
         // ['height', ['height']]
-    ]
+    ],
+    buttons: {
+        hello: HelloButton
+    }
 }
 
 
