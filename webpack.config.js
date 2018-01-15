@@ -49,10 +49,10 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: entrys,
     output: {
-        path: path.join(__dirname, 'docs'),
+        path: path.join(__dirname, 'dist'),
         filename: '[name]' + hash + '.js',
         chunkFilename: '[id]' + hash + '.chunk.js',
-        publicPath: '/',
+        publicPath: isProd ? 'https://laomu1988.github.io/editor-demo/' : '/',
     },
     module: {
         rules: [
